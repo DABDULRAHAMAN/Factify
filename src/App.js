@@ -274,6 +274,11 @@ function App() {
     [currentCategory]
   );
 
+  // Filter facts based on search query
+  const filteredFacts = facts.filter((fact) =>
+    fact.text.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
       <Header showForm={showForm} setShowForm={setShowForm} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
@@ -284,11 +289,11 @@ function App() {
       <main className='main'>
         <CategoryFilter setCurrentCategory={setCurrentCategory} />
         <section>
-          <SurpriseFact facts={facts} setFacts={setFacts} />
+          <SurpriseFact facts={filteredFacts} setFacts={setFacts} />
           {isLoading ? (
             <Loader />
           ) : (
-            <FactList facts={facts} setFacts={setFacts} />
+            <FactList facts={filteredFacts} setFacts={setFacts} />
           )}
         </section>
       </main>
