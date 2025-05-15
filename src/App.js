@@ -37,19 +37,6 @@ const initialFacts = [
   },
 ];
 
-function Counter() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div>
-      <span style={{ fontSize: '40px' }}>{count}</span>
-      <button className='btn btn-large' onClick={() => setCount((c) => c + 1)}>
-        +1
-      </button>
-    </div>
-  );
-}
-
 function SurpriseFact({ facts, setFacts }) {
   const [surpriseFact, setSurpriseFact] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
