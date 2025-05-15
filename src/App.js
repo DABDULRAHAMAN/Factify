@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import supabase from './supabase';
+import React from 'react';
+
 
 import './style.css';
 
