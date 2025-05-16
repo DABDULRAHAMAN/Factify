@@ -101,7 +101,7 @@ function SurpriseFact({ facts, setFacts }) {
         className='btn btn-large'
         onClick={getRandomFact}
         style={{
-          background: 'linear-gradient(135deg, #FF6B6B, #4ECDC4, #45B7D1, #96C93D)',
+          background: 'linear-gradient(135deg, #FF1E1E, #7209B7, #3A0CA3, #4361EE)',
           padding: '20px 40px',
           fontSize: '24px',
           textShadow: '1px 1px 2px rgba(0, 0, 0, 0.3)',
